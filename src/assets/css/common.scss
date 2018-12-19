@@ -1,0 +1,149 @@
+// @import { routerMode } from './common/env'
+// $default-font-size: 23.43px !default;
+$main-color:#0080ff;
+$main-bg:linear-gradient(0deg, #0080ff 0%, #27c1ff 100%);
+// html{
+//   font-size: $default-font-size;
+// }
+body {
+    margin: 0 !important;
+    height: 100%;
+    // -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: "Microsoft Yahei", "微软雅黑", STHeiti, Tahoma, Helvetica;
+}
+
+input[type=radio],
+input[type=checkbox] {
+	cursor: pointer;
+	margin-right: 5px;
+}
+.ivu-input:hover {
+	border-color: #57a3f3;
+}
+.ivu-input:focus {
+	border-color: #ddd;
+	outline: 0;
+	box-shadow: none;
+}
+// .ivu-input{
+// 	padding: 4px 7px;
+// }
+
+/*解决蓝色边框*/
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+textarea,
+p,
+th,
+td,
+img {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+ul {
+    >li {
+        list-style: none;
+    }
+}
+
+i,
+em {
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+// input:focus,
+// textarea:focus,
+// select:focus {
+//     outline-offset: 0;
+// }
+
+// @function toRem($px){
+//   // @return ($px*414/750/$default-font-size)*1rem;
+//   @return ($px/2/$default-font-size)*1rem;
+//   @return ($px/$default-font-size)*1rem;
+// }
+.navbar {
+    display: none;
+}
+
+//字体大小，颜色
+@mixin sc($size, $color) {
+    font-size: $size;
+    color: $color;
+}
+
+//宽高
+@mixin wh($width, $height) {
+    width: $width;
+    height: $height;
+}
+.ivu-message{
+    top:200px !important;
+    .ivu-message-notice-content{
+        height: 80px;
+        padding: 0 20px;
+        span{
+            font-size: 18px;
+            line-height: 80px;
+            // color:red;
+        }
+    }
+}
+.ivu-message .ivu-icon{
+    font-size:20px;
+}
+
+.ivu-icon:before,
+.ivu-icon:after {
+    font-family: Ionicons !important;
+}
+
+.vertical-center-modal,.ivu-modal-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .ivu-modal{
+      top: 0;
+    }
+}
